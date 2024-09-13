@@ -1,0 +1,32 @@
+{
+  "name": "fp",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "fp/src",
+  "projectType": "library",
+  "release": {
+    "version": {
+      "generatorOptions": {
+        "packageRoot": "dist/{projectRoot}",
+        "currentVersionResolver": "git-tag"
+      }
+    }
+  },
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/fp",
+        "main": "fp/src/index.ts",
+        "tsConfig": "fp/tsconfig.lib.json",
+        "assets": ["fp/*.md"]
+      }
+    },
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "dist/{projectRoot}"
+      }
+    }
+  }
+}
