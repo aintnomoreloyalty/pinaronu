@@ -1,12 +1,3 @@
-# fp
-
-This library was generated with [Nx](https://nx.dev).
-
-## Building
-
-Run `nx build fp` to build the library.
-
-
 ## Documentation
 
 This module provides two main types: `Option` and `Result`, which are useful for handling optional values and error cases in a functional programming style.
